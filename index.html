@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Personal Portfolio</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+	<div class="container">
+		<nav>
+			<img src="imgs/logo.png" class="logo">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="header-text">
+			<p>Software Developer</p>
+			<h1>Hi, I am <span>John </span>Geter</h1>
+		</div>
+	</div>
+</div>
+<!------about-------->
+<div id="about">
+	<div class="container">
+		<div class="row">
+			<div class="about-col-1">
+				<img src="imgs/personal.jpg" width="35%" height="100%">
+			</div>
+			<div class="about-col-2">
+				<h1 class="subtitle">About Me</h1>
+				<p>Hello! My name is John Geter IV, 
+					and I am a driven computer 
+					science student at 
+					North Carolina A&T State 
+					University, with a passion for 
+					designing and building cutting-edge 
+					computer and web applications.
+					<br><br>
+					Originally from Charlotte, NC, I have 
+					always had an insatiable curiosity for 
+					technology.
+					I am well-versed in several programming languages, including 
+					Java, Python, and the main front-end languages. I have numerous
+					experiences working with SQL databases as well.
+				</p>
+				<div class="tab-titles">
+					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+					<p class="tab-links" onclick="opentab('experience')">Experience</p>
+					<p class="tab-links" onclick="opentab('education')">Education</p>
+				</div>
+				<div class="tab-contents active-tab" id="skills">
+					<ul>
+						<li><span>Java/Python</span><br>Creating Computer Programs</li>
+						<li><span>Web Development</span><br>Designing Web Applications</li>
+						<li><span>Database Administration</span><br>Managing SQL Databases</li>
+					</ul>
+				</div>
+				<div class="tab-contents" id="experience">
+					<ul>
+						<li><span>2022 - Present</span><br>Grade School Tutor - Amplified Learning Center</li>
+						<li><span>2021 - 2022</span><br>Customer Service Associate - Lowes Home Improvement</li>
+					</ul>
+				</div>
+				<div class="tab-contents" id="education">
+					<ul>
+						<li><span>2026</span><br>B.S. Computer Science - North Carolina A&T State University</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="services">
+	<div class="container">
+		<div class="service-row">
+			<div>
+				<h1 class="heading">My Services</h1>
+			</div>
+			<div class="services-list">
+				<div>
+					<h2 class="service-col">Custom Web Development</h2>
+					<p>Whether you need a simple brochure-style 
+						site or a complex e-commerce platform, 
+						we have the skills and experience to bring 
+						your vision to life. With our custom web 
+						development service, you'll get a website 
+						that sets you apart from the competition and 
+						helps you achieve your business objectives.</p>
+						<a href="#">learn more..</a>
+				</div>
+				<div>
+					<h2 class="service-col">Business Automation</h2>
+					<p>Our cutting-edge automation technology can 
+						streamline your processes, allowing you to 
+						focus on more important tasks. From data 
+						entry and report generation to customer 
+						service inquiries and beyond, our service 
+						can handle it all.</p>
+						<a href="#">learn more..</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	var tablinks = document.getElementsByClassName("tab-links");
+	var tabcontents = document.getElementsByClassName("tab-contents");
+
+	function opentab(tabname) {
+		for (tablink of tablinks) {
+			tablink.classList.remove("active-link");
+		}
+		for (tabcontent of tabcontents) {
+			tabcontent.classList.remove("active-tab")
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+	}
+</script>
+</body>
+</html>
