@@ -135,7 +135,7 @@ nav ul li a:hover::after{
 }
 #services{
     padding: 50px 0;
-    color:#ababaa;
+    color:#fff;
 }
 .heading{
     font-size: 60px;
@@ -149,7 +149,7 @@ nav ul li a:hover::after{
     margin-top: 50px;
 }
 .service-col{
-    color:#62b8ff;
+    color:#fff;
 }
 .services-list div{
     background: #262626;
@@ -157,4 +157,59 @@ nav ul li a:hover::after{
     font-size: 14px;
     font-weight: 300;
     border-radius: 10px;
+    transition: background 0.5s, transform 0.5s
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom:15px;
+}
+.services-list div a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #62b8ff;
+    transform: translateY(-10px);
+}
+#portfolio{
+    padding: 50px 0;
+    color:#fff;
+}
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.project-list div{
+    padding: 10px;
+    border-radius: 10px;
+}
+.content-img{
+    position:relative;
+    float: left;
+    padding-bottom: 15px;
+}
+.content-img div{
+    position: absolute;
+    background: #262626;
+    color: #fff;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s, opacity 0.2s linear; 
+    transition: visibility 0s, opacity 0.2s linear;
+}
+.content-img:hover{
+    cursor: pointer; 
+}
+.content-img:hover div{
+    width: 100px;
+    visibility: visible;
+    opacity: 0.7;
 }
